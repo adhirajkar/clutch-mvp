@@ -11,12 +11,14 @@
 - [x] Role-Based Access Control (RBAC)
 - [x] User model with hashed passwords
 - [x] Secure route protection (`/admin`, `/user`)
+- [x] Social Login (Google)
+- [ ] Mail verification
 
 #### Frontend
 - [x] Login/Signup forms
-- [x] Store and manage JWT (localStorage or HttpOnly cookie)
+- [x] Store and manage JWT (localStorage)
 - [x] Role-based route access (React Router guards)
-- [x] Auth context
+- [x] Auth store (zustand)
 
 ---
 
