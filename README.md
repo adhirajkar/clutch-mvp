@@ -10,7 +10,7 @@ ClutchMVP is a production-ready, scalable **full-stack boilerplate** designed to
 - ⚛️ React (with **TypeScript** + **Vite**)
 - 🎨 Tailwind CSS + **shadcn/ui** for beautiful UI components
 - 🧠 Modular component structure
-- 🔔 Toast notifications via `react-hot-toast`
+- 🔐 Frontend **RBAC support** using role-based UI control & protected routes
 - 📋 CRM-style **Admin Dashboard** with full CRUD integration
 
 ### 🧰 Backend
