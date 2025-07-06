@@ -1,143 +1,109 @@
-# 📦 ClutchMVP – The Ultimate MVP Boilerplate
+# ⚙️ ClutchMVP – Full Stack Boilerplate
 
-**ClutchMVP** is a production-ready boilerplate to help developers build MVPs fast and right. Includes RBAC auth, RESTful CRUD APIs, file upload, real-time communication, and more — all pre-configured so you can focus on building features.
+ClutchMVP is a production-ready, scalable **full-stack boilerplate** designed to help developers rapidly launch MVPs. It features clean and reusable backend architecture, RBAC-based auth with Google login, an admin CRM dashboard, and a modern React frontend.
 
 ---
 
-### 🔐 Phase 1: Authentication & RBAC
+## 🛠 Tech Stack
+
+### 🌐 Frontend
+- ⚛️ React (with **TypeScript** + **Vite**)
+- 🎨 Tailwind CSS + **shadcn/ui** for beautiful UI components
+- 🧠 Modular component structure
+- 🔔 Toast notifications via `react-hot-toast`
+- 📋 CRM-style **Admin Dashboard** with full CRUD integration
+
+### 🧰 Backend
+- 🔧 Node.js + Express
+- 🛢 MongoDB + Mongoose
+- 🔐 JWT-based Authentication
+- 🌍 Google OAuth2 Login
+- 🧱 Role-Based Access Control (RBAC)
+- 📦 **Reusable CRUD Controller Generator** with:
+  - Filters, Search, Sort, Pagination
+  - Per-route middleware (e.g., RBAC, auth, logging)
+  - Easy plug-and-play for any model
+
+---
+
+## ✅ Features Implemented
+
+- 🔑 JWT + Google OAuth Login
+- 👮 Role-based middleware with full control per route
+- ⚙️ CRUD API generator with search, sort, filter, pagination
+- 📊 Admin CRM Dashboard built with React
+- 🧱 Modular and scalable folder structure
+
+---
+
+## 🧩 Upcoming Plugin Roadmap
+
+- 💬 **Socket.io** for real-time chat
+- 🎥 **WebRTC** integration for video calling
+- ☁️ **S3 image/file uploads** with Multer
+- 🧪 **Jest + Supertest** test suite setup
+- 📚 **Swagger/OpenAPI Docs** auto-generated from routes
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/adhirajkar/clutch-mvp.git
+cd clutch-mvp
+```
+
+---
+
+### 2. Setup Environment Variables
+
+#### 🛠 Backend – `server/.env`
+
+```env
+PORT=5000
+MONGO_URI=
+JWT_SECRET=
+JWT_EXPIRE=
+```
+
+#### 🎨 Frontend – `client/.env`
+
+```env
+VITE_GOOGLE_CLIENT_ID=
+```
+
+> ✅ Replace credentials with your own MongoDB URI and secure secrets before deploying.
+
+---
+
+### 3. Install Dependencies & Run Dev Servers
 
 #### Backend
-- [x] JWT-based Auth (Login/Register)
-- [x] Role-Based Access Control (RBAC)
-- [x] User model with hashed passwords
-- [x] Secure route protection (`/admin`, `/user`)
-- [x] Social Login (Google)
-- [ ] Mail verification
+
+```bash
+cd server
+npm install
+npm run dev
+```
 
 #### Frontend
-- [x] Login/Signup forms
-- [x] Store and manage JWT (localStorage)
-- [x] Role-based route access (React Router guards)
-- [x] Auth store (zustand)
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
 
 ---
 
-### 🧱 Phase 2: CRUD System
+## 🤝 Contributing
 
-#### Backend
-- [ ] Generic CRUD APIs (e.g., Products, Posts)
-- [ ] Pagination, filtering, and sorting
-- [ ] Modular file structure for controllers/services
-
-#### Frontend
-- [ ] Reusable form components for create/update
-- [ ] List view with pagination and filters
-- [ ] Table/grid view for admins
-- [ ] Toast notifications (success/error)
+Want to help add plugins like WebRTC, file uploads, or Swagger docs? PRs and ideas are always welcome!
 
 ---
 
-### 📁 Phase 3: File Upload
 
-#### Backend
-- [ ] Multer setup for handling file/image uploads
-- [ ] Local and Cloud support (e.g., AWS S3 or Cloudinary)
-- [ ] Validation for file type and size
-
-#### Frontend
-- [ ] File picker and drag/drop UI
-- [ ] Preview uploaded files/images
-- [ ] Show upload progress bar
-
----
-
-### 🌐 Phase 4: WebSockets (Real-time)
-
-#### Backend
-- [ ] Socket.IO integration with room and event handling
-- [ ] JWT-authenticated WebSocket connections
-
-#### Frontend
-- [ ] Socket.IO client connection setup
-- [ ] Real-time notifications or chat messages
-- [ ] Auto-refresh content on updates
-
----
-
-### 🎥 Phase 5 (Optional): WebRTC Integration
-
-#### Backend
-- [ ] WebRTC signaling setup via Socket.IO
-- [ ] Manage peer connections and rooms
-
-#### Frontend
-- [ ] Peer-to-peer video/audio call UI
-- [ ] Start/stop/mute call features
-
----
-
-### 🔒 Phase 6: Security Enhancements
-
-#### Backend
-- [ ] Rate limiting with `express-rate-limit`
-- [ ] Use `helmet`, CORS, centralized error handling
-- [ ] Advanced RBAC (permissions from DB)
-
-#### Frontend
-- [ ] Handle token expiration and 401 responses
-- [ ] Graceful logout
-- [ ] Optional token refresh logic
-
----
-
-### 🧪 Phase 7: Testing
-
-#### Backend
-- [ ] Unit & integration tests (Jest, Supertest)
-- [ ] API docs via Swagger/Postman
-
-#### Frontend
-- [ ] Unit tests (Jest + React Testing Library)
-- [ ] E2E tests (Cypress or Playwright)
-
----
-
-### 📄 Phase 8: Documentation
-
-- [ ] Swagger/OpenAPI for backend
-- [ ] Postman collection
-- [ ] `.env.example` file
-- [ ] Clear setup & usage instructions
-
----
-
-### 🐳 Phase 9: Docker & CI/CD
-
-- [ ] Dockerize backend and frontend apps
-- [ ] Docker Compose for local dev
-- [ ] GitHub Actions for CI: lint/test/build
-- [ ] Deploy backend (Render, Railway) & frontend (Vercel, Netlify)
-
----
-
-### 🎛️ Phase 10: Admin Panel / Dashboard
-
-#### Frontend
-- [ ] Admin-only dashboard with protected routes
-- [ ] User and role management UI
-- [ ] Logs & analytics (optional)
-- [ ] Dark mode + fully responsive layout
-
----
-
-### 💡 Bonus Features (Optional)
-
-- [ ] Email verification & password reset
-- [ ] i18n support
-- [ ] Modular plugin-ready architecture
-- [ ] Component UI library (Tailwind, ShadCN, Chakra)
-- [ ] Starter modules like blog or e-commerce
-
----
-
-> 💬 Built for developers who want to move fast, stay secure, and scale with confidence.
+> Built to ship fast ⚡ | Designed to scale 🚀 | Made with ❤️ by Adhiraj
