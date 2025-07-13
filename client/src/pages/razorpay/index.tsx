@@ -6,6 +6,9 @@ import { useApi } from "@/hooks/useApi";
 import { v4 as uuidv4 } from 'uuid';
 import { toast } from "sonner";
 import { loadScript } from "@/utils/helper";
+import { Link } from "react-router-dom";
+import { ChevronLeft } from "lucide-react";
+
 const RazorpayTest = () => {
   const [amount, setAmount] = useState("");
   const [razorpayKey, setRazorpayKey] = useState("");
@@ -34,6 +37,8 @@ const RazorpayTest = () => {
         body: options
     })
    const paymentObj = new (window as any).Razorpay({
+    name: "ClutchMVP",
+    image: "https://media.istockphoto.com/id/1412715867/vector/electric-power-vector-icon.jpg?s=612x612&w=0&k=20&c=dkE2skX6iW8gBR4qussOzURGZMln7eSbakkXi0xJEgQ=",
     key: razorpayKey,
     order_id: res.data.id,
     ...res.data,
@@ -67,6 +72,9 @@ const RazorpayTest = () => {
 
   return (
     <div className="max-w-md mx-auto mt-20 p-6 bg-white rounded-2xl shadow-lg space-y-4">
+      <div className="mb-4 cursor-pointer hover:bg-gray-100 w-fit rounded-md py-2 pl-2 pr-4">
+        <Link className="flex items-center" to="/"><ChevronLeft /><span className="font-semibold">Home</span></Link>
+      </div>
       <h1 className="text-2xl font-bold text-center">Razorpay Test</h1>
       <form onSubmit={handlePayment} className="space-y-4">
         <div>
