@@ -1,6 +1,17 @@
 # ⚙️ ClutchMVP – Full Stack Boilerplate
 
-ClutchMVP is a production-ready, scalable **full-stack boilerplate** designed to help developers rapidly launch MVPs. It features clean and reusable backend architecture, RBAC-based auth with Google login, an admin CRM dashboard, and a modern React frontend.
+ClutchMVP is a production-ready, scalable **full-stack boilerplate** designed to help developers rapidly launch MVPs. It features clean and reusable backend architecture, RBAC-based auth with Google login, Razorpay payments, an admin CRM dashboard, and a modern React frontend.
+
+---
+
+## ✅ Features Implemented
+
+- 🔑 JWT + Google OAuth Login
+- 👮 Role-based middleware with full control per route
+- ⚙️ CRUD API generator with search, sort, filter, pagination
+- 📊 Admin CRM Dashboard built with React
+- 💳 Razorpay payment gateway (frontend + backend)
+- 🧱 Modular and scalable folder structure
 
 ---
 
@@ -12,6 +23,7 @@ ClutchMVP is a production-ready, scalable **full-stack boilerplate** designed to
 - 🧠 Modular component structure
 - 🔐 Frontend **RBAC support** using role-based UI control & protected routes
 - 📋 CRM-style **Admin Dashboard** with full CRUD integration
+- 💳 Razorpay payment integration
 
 ### 🧰 Backend
 - 🔧 Node.js + Express
@@ -23,16 +35,7 @@ ClutchMVP is a production-ready, scalable **full-stack boilerplate** designed to
   - Filters, Search, Sort, Pagination
   - Per-route middleware (e.g., RBAC, auth, logging)
   - Easy plug-and-play for any model
-
----
-
-## ✅ Features Implemented
-
-- 🔑 JWT + Google OAuth Login
-- 👮 Role-based middleware with full control per route
-- ⚙️ CRUD API generator with search, sort, filter, pagination
-- 📊 Admin CRM Dashboard built with React
-- 🧱 Modular and scalable folder structure
+- 💰 Razorpay API support for secure payments
 
 ---
 
@@ -66,6 +69,8 @@ PORT=5000
 MONGO_URI=
 JWT_SECRET=
 JWT_EXPIRE=
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
 ```
 
 #### 🎨 Frontend – `client/.env`
@@ -74,7 +79,7 @@ JWT_EXPIRE=
 VITE_GOOGLE_CLIENT_ID=
 ```
 
-> ✅ Replace credentials with your own MongoDB URI and secure secrets before deploying.
+> ✅ Replace credentials with your own MongoDB URI, Razorpay keys, and secure secrets before deploying.
 
 ---
 
@@ -96,7 +101,6 @@ npm install
 npm run dev
 ```
 
-
 ---
 
 ## 🤝 Contributing
@@ -104,6 +108,5 @@ npm run dev
 Want to help add plugins like WebRTC, file uploads, or Swagger docs? PRs and ideas are always welcome!
 
 ---
-
 
 > Built to ship fast ⚡ | Designed to scale 🚀 | Made with ❤️ by Adhiraj
