@@ -7,6 +7,7 @@ import { useAuthStore } from "@/store/useAuthStore";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Home from './pages/home';
 import AdminCRM from './pages/crm';
+import RazorpayTest from './pages/razorpay';
 
 function App() {
     const { isLoading, isAuthenticated, setUser, setLoading, user } = useAuthStore();
@@ -72,6 +73,12 @@ function App() {
                         }
                     </ProtectedRoute>
                 } />
+                 <Route path="/razorpay-test" element={
+                    <ProtectedRoute>
+                       <RazorpayTest />
+                    </ProtectedRoute>
+                } />
+
                 
                 <Route path="/login" element={!isAuthenticated ? <Login /> : <Navigate to="/" />} />
                 <Route path="/signup" element={!isAuthenticated ? <Signup /> : <Navigate to="/" />} />

@@ -4,6 +4,10 @@ const crypto = require("crypto");
 
 const razorpayInstance = createRazorpayInstance();
 
+function fetchRazorpayKey(req,res){
+    return successResponse(res, "Razorpay key fetched successfully", {key: process.env.RAZORPAY_KEY_ID});
+}
+
 async function createOrder(req, res) {
     // in real app do not take amount from req.body
     // take it from the product price or cart total 
@@ -37,4 +41,4 @@ async function verifyPayment(req,res){
     return errorResponse(res, "Payment verification failed");
 }
     
-module.exports = { createOrder, verifyPayment };
+module.exports = { fetchRazorpayKey, createOrder, verifyPayment };
