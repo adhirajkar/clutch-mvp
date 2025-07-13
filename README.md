@@ -10,7 +10,7 @@ ClutchMVP is a production-ready, scalable **full-stack boilerplate** designed to
 - 👮 Role-based middleware with full control per route
 - ⚙️ CRUD API generator with search, sort, filter, pagination
 - 📊 Admin CRM Dashboard built with React
-- 💳 Razorpay payment gateway (frontend + backend)
+- 💳 Razorpay payment gateway
 - 🧱 Modular and scalable folder structure
 
 ---
